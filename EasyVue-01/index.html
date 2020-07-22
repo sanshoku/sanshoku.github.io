@@ -5,17 +5,22 @@
   
 
   
-  <title>Venn碎碎念</title>
+  <title>Vue超超超基本概念① | Venn碎碎念</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生總是充滿變數，Adobe Xd基本每週都要更新，最討厭GUI但GUI又不能不做。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Venn碎碎念">
-<meta property="og:url" content="https://sanshoku.github.io/index.html">
+  <meta name="description" content="是這樣的。我發現我的電腦語言太多了一直處在混亂邪惡狀態，與其期待他跑出正常的結果不如寫篇教學文章（讀音：誤導廢文）來講解vue的使用方式。有很多人在接觸前端的時候都止步於html跟css，主要的工作內容就是切版（順帶一提我回到台灣才第一次聽到切版，第一個反應就是這三小，後來才知道是畫盒子），不會接觸到Javascript相關的東西。 對我來說很新奇的是，雖然在網頁開發上我是超級新手，學校的教育也沒">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue超超超基本概念①">
+<meta property="og:url" content="https://sanshoku.github.io/EasyVue-01/index.html">
 <meta property="og:site_name" content="Venn碎碎念">
-<meta property="og:description" content="人生總是充滿變數，Adobe Xd基本每週都要更新，最討厭GUI但GUI又不能不做。">
+<meta property="og:description" content="是這樣的。我發現我的電腦語言太多了一直處在混亂邪惡狀態，與其期待他跑出正常的結果不如寫篇教學文章（讀音：誤導廢文）來講解vue的使用方式。有很多人在接觸前端的時候都止步於html跟css，主要的工作內容就是切版（順帶一提我回到台灣才第一次聽到切版，第一個反應就是這三小，後來才知道是畫盒子），不會接觸到Javascript相關的東西。 對我來說很新奇的是，雖然在網頁開發上我是超級新手，學校的教育也沒">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://sanshoku.github.io/_img/Vuelogic.jpg">
+<meta property="article:published_time" content="2020-07-20T06:19:38.000Z">
+<meta property="article:modified_time" content="2020-07-22T03:26:05.800Z">
 <meta property="article:author" content="WenlinPan">
+<meta property="article:tag" content="Vue Front-end">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sanshoku.github.io/_img/Vuelogic.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Venn碎碎念" type="application/atom+xml">
   
@@ -68,9 +73,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-EasyVue-01" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-EasyVue-01" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/EasyVue-01/" class="article-date">
   <time datetime="2020-07-20T06:19:38.000Z" itemprop="datePublished">2020-07-20</time>
@@ -83,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/EasyVue-01/">Vue超超超基本概念①</a>
+    <h1 class="article-title" itemprop="name">
+      Vue超超超基本概念①
     </h1>
   
 
@@ -140,60 +143,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/hello-world/" class="article-date">
-  <time datetime="2020-07-20T04:31:47.316Z" itemprop="datePublished">2020-07-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/hello-world/">Hello World</a>
-    </h1>
+    <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sanshoku.github.io/hello-world/" data-id="ckcwte9ui000146xw1zgdetf9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
