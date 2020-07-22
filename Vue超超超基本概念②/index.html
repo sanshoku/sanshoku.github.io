@@ -20,30 +20,36 @@
     var CONFIG = {"hostname":"sanshoku.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="人生總是充滿變數，Adobe Xd基本每週都要更新，最討厭GUI但GUI又不能不做。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Venn碎碎念">
-<meta property="og:url" content="https://sanshoku.github.io/index.html">
+  <meta name="description" content="雜談  只是隔了一下就強烈覺得前一篇都在亂寫，算惹。②與其說是②，不如說想整理一下我自己對前端、對程式的觀念，也期待幾年後的自己在看到這篇文章的時候能夠有更多觀念上的進步與改變。 首先，html在我心目中就是純粹的「格子」跟「格子裡的（固定）內容」，是單純但也最重要的部分。只有知道有怎樣的內容，該怎麼被裝在一個個盒子裡，才能去設計要怎麼裝飾這個盒子、怎麼讓盒子為我們工作。CSS的目的是給電腦上色">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隨便講講開發② - Vue②跟一些碎碎念">
+<meta property="og:url" content="https://sanshoku.github.io/Vue%E8%B6%85%E8%B6%85%E8%B6%85%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E2%91%A1/index.html">
 <meta property="og:site_name" content="Venn碎碎念">
-<meta property="og:description" content="人生總是充滿變數，Adobe Xd基本每週都要更新，最討厭GUI但GUI又不能不做。">
+<meta property="og:description" content="雜談  只是隔了一下就強烈覺得前一篇都在亂寫，算惹。②與其說是②，不如說想整理一下我自己對前端、對程式的觀念，也期待幾年後的自己在看到這篇文章的時候能夠有更多觀念上的進步與改變。 首先，html在我心目中就是純粹的「格子」跟「格子裡的（固定）內容」，是單純但也最重要的部分。只有知道有怎樣的內容，該怎麼被裝在一個個盒子裡，才能去設計要怎麼裝飾這個盒子、怎麼讓盒子為我們工作。CSS的目的是給電腦上色">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-07-22T03:40:47.000Z">
+<meta property="article:modified_time" content="2020-07-22T05:03:44.006Z">
 <meta property="article:author" content="WenlinPan">
+<meta property="article:tag" content="CodeNote">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="“前端”">
+<meta property="article:tag" content="邏輯">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sanshoku.github.io/">
+<link rel="canonical" href="https://sanshoku.github.io/Vue%E8%B6%85%E8%B6%85%E8%B6%85%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E2%91%A1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>Venn碎碎念</title>
+  <title>隨便講講開發② - Vue②跟一些碎碎念 | Venn碎碎念</title>
   
 
 
@@ -142,9 +148,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
@@ -160,10 +167,9 @@
       <meta itemprop="name" content="Venn碎碎念">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Vue%E8%B6%85%E8%B6%85%E8%B6%85%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E2%91%A1/" class="post-title-link" itemprop="url">隨便講講開發② - Vue②跟一些碎碎念</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          隨便講講開發② - Vue②跟一些碎碎念
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -187,7 +193,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2> 雜談</h2>
+        <h2> 雜談</h2>
 
 <p>只是隔了一下就強烈覺得前一篇都在亂寫，算惹。<br>②與其說是②，不如說想整理一下我自己對前端、對程式的觀念，也期待幾年後的自己在看到這篇文章的時候能夠有更多觀念上的進步與改變。</p>
 <p>首先，html在我心目中就是純粹的「格子」跟「格子裡的（固定）內容」，是單純但也最重要的部分。只有知道有怎樣的內容，該怎麼被裝在一個個盒子裡，才能去設計要怎麼裝飾這個盒子、怎麼讓盒子為我們工作。<br>CSS的目的是給電腦上色、調大小，我不會切版，也不是不會應該說不擅長，到現在偶爾還會把div搞崩（幸好不是靠這吃飯）但這些格子不崩不消失本身就是網頁的基礎，所以CSS也很重要。<br>Javascript，或別的語言，或任何一種形態的JS Library，都是在用系統化的方式讓電腦去安排這些東西。比方說那些本來我們要從資料庫裡面手動複製貼上的文字內容、要一個一個改的顏色跟大小、要一格一格去設定的CSS語法，全部都讓程式來自動搞定。</p>
@@ -212,122 +218,36 @@
 
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/CodeNote/" rel="tag"># CodeNote</a>
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+              <a href="/tags/%E2%80%9C%E5%89%8D%E7%AB%AF%E2%80%9D/" rel="tag"># “前端”</a>
+              <a href="/tags/%E9%82%8F%E8%BC%AF/" rel="tag"># 邏輯</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://sanshoku.github.io/EasyVue-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenlinPan">
-      <meta itemprop="description" content="人生總是充滿變數，Adobe Xd基本每週都要更新，最討厭GUI但GUI又不能不做。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Venn碎碎念">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/EasyVue-01/" class="post-title-link" itemprop="url">隨便講講開發① - Vue</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-07-20 14:19:38" itemprop="dateCreated datePublished" datetime="2020-07-20T14:19:38+08:00">2020-07-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-07-22 12:48:37" itemprop="dateModified" datetime="2020-07-22T12:48:37+08:00">2020-07-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>是這樣的。<br>我發現我的電腦語言太多了一直處在混亂邪惡狀態，與其期待他跑出正常的結果不如寫篇教學文章（讀音：誤導廢文）來講解vue的使用方式。<br>有很多人在接觸前端的時候都止步於html跟css，主要的工作內容就是切版（順帶一提我回到台灣才第一次聽到切版，第一個反應就是這三小，後來才知道是畫盒子），不會接觸到Javascript相關的東西。 對我來說很新奇的是，雖然在網頁開發上我是超級新手，學校的教育也沒很想把我們這些UX designer養成什麼都會的獨角獸，但簡單帶過html跟css以後我們就⋯⋯都在動態網頁。</p>
-<p>Vue是我自己最喜歡的，因為他最簡單最可愛。（損友說是電波對到了）<br>間單的說，Vue是React, Angular, Vue三個主要的前端模板裡最好學也是最輕便的<br>對於有點基本網頁code經驗的人而言理論上不難，真的，超基本就可以</p>
-<p>那Vue是啥東西呢？他到底為啥比html好用咧？</p>
-<p>首先既然要寫教學文就要準備教學的內容<br>要用Vue就要下載Vue，我自己習慣的編譯器是VS studio，免費的，大家都可以去載個。會換VS純粹因為當年（？）學Python的時候因為名字很酷所以很喜歡的Spyder不知道為什麼就是裝不進我的電腦（我不當工程師的主要原因之一就是我常常觸發一些奇蹟般的bug，拿去問在iBM工作的朋友他都摸不著頭緒的那種）<br>怎麼裝東西網路上應該有不少文章，不過我是覺得不用講這麼複雜，裝個node.js然後在cmd裡（蘋果叫終端機）打(sudo) npm install -g @vue/cli 讓他跑就好了</p>
-<p>基本上vue的邏輯就是，你開一個範本以後script的內容會被餵給範本，有些人叫這個「渲染」。這種做法叫前端渲染，好處是你伺服器不需要一直吞吞吐吐也不會改了個模板就到處爆炸，壞處是SEO抓動態網頁比較慢讀網頁也可能稍微久一點。就我自己的立場來說我是覺得「那不然我自己讓他跑成html然後抓下來XD」</p>
-<h2> Vue本人 </h2>
+        
 
 
-
-<p>底下的範例主要以讓他長在html上面的樣子為主，不是乾淨好用的Vue app &lt;–<br>不過反正就，功能講解XD 而且我又不是工程師（推卸責任）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&#x2F;&#x2F;這邊的template講的就是呃，你的頁面應該長這樣&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">   &lt;div id&#x3D;“test&quot;&gt;</span><br><span class="line">       &lt;input type &#x3D; “text  v-model &#x3D; “變數名稱” value &#x3D; “變數名稱”&gt;</span><br><span class="line">       &#x2F;&#x2F;上面這行是vue指令&#x2F;&#x2F;</span><br><span class="line">       &lt;p&gt; 在這裡顯示 &#123;&#123; 變數名稱 &#125;&#125; &lt;&#x2F;p&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F; script 當然就是你要你的程式怎麼對答案了&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">   data() &#123;</span><br><span class="line">           return &#123;</span><br><span class="line">                   變數名稱: ‘叫人輸入變數的話’</span><br><span class="line">                   &#125;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2> Component = 組件 </h2>
-
-
-<p>上面這個很簡單的例子用到v-model，v-model的預設值是用來吃一個input一個value這種簡單互動的，但也可以自己定義單選複選類的input。以官方文件上的例子來說：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Vue.component(&#39;base-checkbox’, &#123;</span><br><span class="line">&#x2F;&#x2F;宣告一個Vue的組件取名叫&#39;base-checkbox’&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line"> model: &#123; </span><br><span class="line">&#x2F;&#x2F; 來指定這個事件的內容囉 &#x2F;&#x2F;</span><br><span class="line">prop: &#39;checked’, </span><br><span class="line">event: &#39;change&#39; &#125;,</span><br><span class="line"></span><br><span class="line"> props: &#123;</span><br><span class="line"> checked: Boolean</span><br><span class="line">&#x2F;&#x2F; 意思是這個東西只有1 跟 0 ，點跟不點這樣 &#x2F;&#x2F;</span><br><span class="line">&#125;, </span><br><span class="line"></span><br><span class="line">template: </span><br><span class="line">&#96; &lt;input type&#x3D;&quot;checkbox&quot; v-bind:checked&#x3D;&quot;checked&quot; v-on:change&#x3D;&quot;$emit(&#39;change&#39;, $event.target.checked)&quot; &gt; &#96;</span><br><span class="line">&#x2F;&#x2F;一堆囉哩囉嗦的指令 &#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;到這裡把這個組件宣告完畢&#x2F;&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-<p>然後把這個組件插到你的範本裡的時候這樣叫：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;base-checkbox v-model&#x3D;&quot;你要用來存這個勾或不勾的變數名稱&quot;&gt;&lt;&#x2F;base-checkbox&gt;</span><br></pre></td></tr></table></figure>
-
-<p>每次使用者戳這個盒子的時候你要用來存這個勾或不勾的變數名稱就會被更新<br>只要變數下得好一切就都很好</p>
-<p>很多文章說Vue改起來比較容易，原因之一也有他可以建立components（也不是說別的就不行，反正程式語言都長很像）然後插在不同的網頁裡。components 的作法就是寫好一個.vue檔然後直接引用到要用的動態網頁裡，舉例來說我們有個檔案叫card.vue好了，要把這個card嵌在網頁裡只要喊他就好</p>
-<p>先假裝下面這坨東西是我們的card.vue</p>
-<p>是一樣的。你可能會注意到這堆東東裡沒有data，這是因為在引用的時候你需要另一張卡片來存資料屬性，跟你本人到公司面試還是要帶張履歷在身上同樣的道理。為了保存這些data，我們需要建立一張叫做props或emit的卡卡來跟這個卡卡給template讀，props是從外往內，吃data，emit則是比較接近事件</p>
-<p>Props一般來說長這樣，先寫變數名稱然後再宣告個屬性以防他爆炸。爆炸的意思是，你明明餵了data但你的程式不知道該怎麼對答案。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">props: &#123;</span><br><span class="line">  字串變數: String,</span><br><span class="line">  數量: Number,</span><br><span class="line">  有ㄇ: Boolean,</span><br><span class="line">  列表: Array,</span><br><span class="line">  單品: Object,</span><br><span class="line">  公式: Function,</span><br><span class="line">  contactsPromise: Promise &#x2F;&#x2F; or any other constructor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>除此之外，在component 中的data必須是公式<br>如果data不是公式而是值，你在同一頁上貼的組件就會share一個變數的格子</p>
-<p>當然你也可以在同一個檔案裡宣告這個組件，也是個人練習時比較常見的做法，<br>這樣就不用引來引去，像我這樣電腦路徑特別容易爆又不是很擅長管理網頁的人也不用擔心搞爆⋯⋯</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#39;#blog-post-demo&#39;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    posts: [</span><br><span class="line">      &#123; id: 1, title: &#39;My journey with Vue&#39; &#125;,</span><br><span class="line">      &#123; id: 2, title: &#39;Blogging with Vue&#39; &#125;,</span><br><span class="line">      &#123; id: 3, title: &#39;Why Vue is so fun&#39; &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>第一篇大概就醬。<br>ㄅㄅ！</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/EasyVue-01/" rel="prev" title="隨便講講開發① - Vue">
+      <i class="fa fa-chevron-left"></i> 隨便講講開發① - Vue
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -380,6 +300,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"> 雜談</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">迴圈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text">V-on</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
